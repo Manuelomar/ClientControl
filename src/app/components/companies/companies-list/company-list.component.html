@@ -1,0 +1,35 @@
+<div class="container my-5">
+    <div class="container-button">
+
+        <h1 class="mb-3">Compañias</h1>
+        
+        <button type="button" class="btn btn-warning" style="height: 40px;"><a class="nav-link " aria-current="page" routerLink="/company/add">Agregar</a></button>
+    </div>
+
+<table class="table" *ngIf="companies && companies.length>0">
+<thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Teléfono</th>
+        <th>Detalle</th>
+        <th></th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let company of companies">
+        <td>{{company.name}}</td>
+        <td>{{company.email}}</td>
+        <td>{{company.phone}}</td>
+     
+        <td>
+            <a [routerLink]="['/company/edit', company.id ] ">Detalle </a>
+        </td>
+
+
+
+    </tr>
+</tbody>
+</table>
+<p *ngIf="!companies || companies.length <=0">No se encontraron empleados</p>
+</div>

@@ -1,0 +1,37 @@
+<div class="container my-5">
+    <div class="container-button">
+
+        <h1 class="mb-3">Compañias</h1>
+        
+        <button type="button" class="btn btn-warning" style="height: 40px;"><a class="nav-link " aria-current="page" routerLink="/client/add">Agregar</a></button>
+    </div>
+
+<table class="table" *ngIf="clients && clients.length>0">
+<thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Teléfono</th>
+        <th>Detalle</th>
+        <th></th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let client of clients">
+        <td>{{client.name}}</td>
+        <td>{{client.email}}</td>
+        <td>{{client.phone}}</td>
+        <td>{{client.contact_person}}</td>
+
+     
+        <td>
+            <a [routerLink]="['/client/edit', client.id ] ">Detalle </a>
+        </td>
+
+
+
+    </tr>
+</tbody>
+</table>
+<p *ngIf="!clients || clients.length <=0">No se encontraron empleados</p>
+</div>

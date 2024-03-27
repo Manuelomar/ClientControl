@@ -1,0 +1,30 @@
+<div class="container my-5">
+    <h1 class="mb-2">Editar nuevo empleado</h1>
+    <div class="row">
+        <div class="col-6">
+            <form #form= "ngForm" (ngSubmit)="updateEmployee()" >
+    
+                <div class="mb-3">
+                  <label for="name" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="name" placeholder="Nombre"
+                  name="name" [(ngModel)]="companyDetails.name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email" name="email" [(ngModel)]="companyDetails.email">
+                  </div>
+                  <div class="mb-3">
+                    <label for="phone" class="form-label">Teléfono</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Teléfono" name="phone" [(ngModel)]="companyDetails.phone">
+                  </div>
+                
+                <button type="submit" class="btn btn-primary mr-5">Guardar</button>
+                <button type="button" class="btn btn-danger" (click)="deleteEmployee(companyDetails.id)">Delete</button>
+
+              </form>
+        </div>
+    </div>
+    
+    
+    
+    </div>

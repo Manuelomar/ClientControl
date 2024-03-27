@@ -1,0 +1,39 @@
+<div class="container my-5">
+<h1 class="mb-2"  style="display: flex; justify-content: center;">Agregar Cliente</h1>
+<div class="row " style="display: flex; justify-content: center;">
+    <div class="col-8">
+        <form #form= "ngForm" (ngSubmit)="addECompany()">
+
+            <div class="mb-3">
+              <label for="name" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="name" placeholder="Nombre"
+              name="name" [(ngModel)]="addCompanyRequest.name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" name="email" [(ngModel)]="addCompanyRequest.email">
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Teléfono</label>
+                <input type="text" class="form-control" id="phone" placeholder="Teléfono" name="phone" [(ngModel)]="addCompanyRequest.phone">
+              </div>
+              <div class="mb-3">
+                <label for="description" class="form-label">Descripcion</label>
+                <input type="text" class="form-control" id="description" placeholder="Descripcion"
+                name="description" [(ngModel)]="addCompanyRequest.description">
+              </div>
+            
+              <div class="button-container">
+
+                <button type="submit" class="btn btn-primary">Agregar</button>
+                <button type="submit" class="btn btn-danger" > <a class="navbar-brand" href="/">Cancelar </a></button>
+              </div>
+            
+
+          </form>
+    </div>
+</div>
+
+
+
+</div>
